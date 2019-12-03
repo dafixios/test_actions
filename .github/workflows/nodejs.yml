@@ -24,8 +24,6 @@ jobs:
         ./node_modules/.bin/eslint --ext js,vue src/
     - name: Build 
       if: success()
-      run: npm run build
-    - name: Commit
-      if: success()
       run: |
+        npm run build
         git status
