@@ -28,11 +28,4 @@ jobs:
     - name: Commit
       if: success()
       run: |
-          git config --global user.name 'M6BOT'
-          git config --global user.email 'm6bot@m6connect.com'
-          git remote set-url origin https://x-access-token:abcf77ae6d03ece1c62bd557ed00bcb392750c2a@github.com/dafixios/test_actions
-          git checkout ${GITHUB_REF#refs/heads/}
-          git status
-          git add dist
-          git commit "AUTOMATIC BUILD"
-          git push  
+        git status
