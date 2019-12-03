@@ -20,5 +20,5 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: npm install, lint
       run: |
-        npm ci
+        npm install
         eslint --ext js,vue src/
