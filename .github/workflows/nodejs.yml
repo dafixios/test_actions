@@ -18,7 +18,10 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: npm install, lint
+    - name: npm install, eslint
       run: |
-        npm install
-        ./node_modules/.bin/eslint --ext js,vue src/
+        npm ci
+        eslint --ext js,vue src/
+    - name: Build 
+      run: |
+        npm run build
