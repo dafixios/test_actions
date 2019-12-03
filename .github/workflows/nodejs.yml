@@ -22,8 +22,7 @@ jobs:
       run: |
         npm install
         ./node_modules/.bin/eslint --ext js,vue src/
-    - name: Build 
+    - uses: hmarr/auto-approve-action@v2.0.0
       if: success()
-      run: |
-        npm run build
-        git status
+      with:
+        github-token: "${{ secrets.GITHUB_TOKEN }}"
