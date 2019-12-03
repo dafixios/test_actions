@@ -21,7 +21,7 @@ jobs:
     - name: npm install, eslint
       run: |
         npm install
-        eslint --ext js,vue src/
+        ./node_modules/.bin/eslint --ext js,vue src/
     - name: Build 
       if: success()
       run: npm run build
